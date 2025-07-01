@@ -1,5 +1,194 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    overflow: auto;
+    background-image: var(--background-image);
+    background-color: var(--background-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+
+.header {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    block-size: 100vh;
+    min-block-size: 668px;
+    font-style: normal;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr min-content 1fr;
+    align-items: center;
+
+
+}
+
+.decorated-zone::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    top: var(--padding);
+    right: var(--padding);
+    border-top: 1px solid var(--color-decorated-zone);
+    border-right: 1px solid var(--color-decorated-zone);
+    width: 25px;
+    height: 25px;
+
+}
+
+.decorated-zone::after {
+    content: "";
+    position: absolute;
+    bottom: var(--padding);
+    left: var(--padding);
+    border-bottom: 1px solid var(--color-decorated-zone);
+    border-left: 1px solid var(--color-decorated-zone);
+    box-sizing: border-box;
+    width: 25px;
+    height: 25px;
+}
+
+.header__theme-menu {
+    justify-self: end;
+    align-self: center;
+}
+
+.header__theme-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    padding-left: 23px;
+}
+
+.header__theme-menu-item {
+    color: var(--color-decorated-zone);
+}
+
+.header__theme-menu-button {
+    border: none;
+    padding: 0px 13px;
+    text-transform: lowercase;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.header__theme-menu-button_active {
+    border: 1px solid var(--color-decorated-zone);
+    pointer-events: none;
+}
+
+
+.main {
+    display: grid;
+    gap: 50px;
+}
+
+.main__section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.main__section-title {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-size: 18px;
+    color: var(--color-title);
+    font-weight: 700;
+    font-style: normal;
+    line-height: 23.4px;
+}
+
+.main__section-article {
+    font-family: "IBM Plex Mono", sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 18px;
+    gap: 20px;
+    font-style: normal;
+}
+
+
+.section-link {
+    text-shadow: 2px 2px 0px var(--subtitle-background-color);
+    text-decoration: none;
+}
+
+.section-article__title {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    color: var(--color-subtitle);
+    font-weight: 700;
+    line-height: 23.4px;
+}
+.section-text {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--color-text);
+    font-style: normal;
+    padding-top: 10px;
+    line-height: 23.4px;
+}
+.repeat-title {
+    margin-bottom: 20px;
+}
+
+
+.text-block_title {
+    background-color: var(--subtitle-background-color);
+    color: var(--color-subtitle);
+    font-family: "IBM Plex Mono", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.4px;
+    font-style: normal;
+}
+
+.gallery {
+    display: grid;
+    gap: 11px;
+    grid-template-columns: 1fr;
+}
+
+.gallery__item {
+    box-sizing: border-box;
+    min-block-size: 4.3em;
+    margin: 0;
+}
+
+.gallery__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.footer {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    font-style: normal;
+    position: relative;
+    display: grid;
+    align-items: center;
+    min-block-size: 668px;
+    block-size: 100vh;
+}
+
+.footer__title {
+    color: var(--color-no-focus);
+    text-shadow: 2px 2px 0px var(--subtitle-background-color);
+    font-weight: 700;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    line-height: 82.5%;
+    text-align: center;
 }
