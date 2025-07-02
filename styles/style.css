@@ -9,7 +9,7 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    z-index: -1;
+    z-index: 0;
 }
 
 
@@ -69,7 +69,7 @@
 }
 
 .header__theme-menu-button {
-    border: none;
+    border: 1px solid transparent;
     padding: 0px 13px;
     text-transform: lowercase;
     background-color: transparent;
@@ -270,6 +270,11 @@
     line-height: 23.4px;
     font-weight: 700;
 }
+.section-article__sub{
+    color: var(--color-subtitle);
+    line-height: 23.4px;
+    font-weight: 400;
+}
 
 .pictures {
     display: grid;
@@ -300,7 +305,6 @@
     .main-content-block {
         grid-template-areas: "title title title";
         grid-column: 2/4;
-        padding-left: 5px;
     }
 
     .main__section-factors {
