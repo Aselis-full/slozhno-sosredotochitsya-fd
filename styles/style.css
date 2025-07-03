@@ -300,11 +300,13 @@
     .main__section {
         display: grid;
         grid-template-columns: 1fr 2fr;
+
     }
 
     .main-content-block {
         grid-template-areas: "title title title";
         grid-column: 2/4;
+        margin-left: 5px;
     }
 
     .main__section-factors {
